@@ -2,22 +2,67 @@
 <html>
 <body>
 
-<h1 style="color:darkgreen;">STUDENT DETAILS</h1>
+<h1 style="color:darkgreen;" align=center>STUDENT DETAILS</h1>
+
+
 
 <form action="/action_page.php">
  <fieldset>
-  <label for="fname">Name:</label>
-  <input type="text"  id="fname" name="fname"><br><br>  
-
-  <body style="background-color:powderblue;">
-
-
-  <label for="lname">Maths:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <label for="email">English:</label>
-  <input type="email" id="email" name="email"><br><br>
   
-  <button type="button" onclick="alert('Hello world!')">Update</button>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: powderblue;
+    }
+    
+    .form-container {
+      display: flex;
+      flex-direction: column; /* Change to "row" for horizontal alignment */
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      width: 100px;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      flex: 1;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <div class="form-group">
+    <label for="fname">Name:</label>
+    <input type="text" id="fname" name="fname">
+  </div>
+
+  <div class="form-group">
+    <label for="lname">Maths:</label>
+    <input type="text" id="lname" name="lname">
+  </div>
+
+  <div class="form-group">
+    <label for="email">English:</label>
+    <input type="email" id="email" name="email">
+  </div>
+</div>
+
+  
+  <button type="button" onclick="alert('Hello world!')">Submit</button>
 
  </fieldset>
 </form>
