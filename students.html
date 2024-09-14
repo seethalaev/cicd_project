@@ -31,12 +31,28 @@
       padding: 5px;
     }
   </style>
+  <script>
+    function calculateTotal(event) {
+      // Prevent the form from submitting
+      event.preventDefault();
+      
+      // Get the values of Maths and English fields
+      const maths = parseFloat(document.getElementById('maths').value) || 0;
+      const english = parseFloat(document.getElementById('english').value) || 0;
+
+      // Calculate the total
+      const total = maths + english;
+
+      // Show an alert with the total
+      alert("Total Marks: " + total);
+    }
+  </script>
 </head>
 <body>
 
 <h1 style="color:darkgreen;" align="center">STUDENT DETAILS</h1>
 
-<form action="/action_page.php">
+<form onsubmit="calculateTotal(event)">
   <fieldset>
     <div class="form-container">
       <div class="form-group">
