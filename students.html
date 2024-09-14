@@ -1,14 +1,4 @@
 <!DOCTYPE html>
-<html>
-<body>
-
-<h1 style="color:darkgreen;" align=center>STUDENT DETAILS</h1>
-
-
-
-<form action="/action_page.php">
- <fieldset>
-  
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,7 +10,7 @@
     
     .form-container {
       display: flex;
-      flex-direction: column; /* Change to "row" for horizontal alignment */
+      flex-direction: column;
       max-width: 400px;
       margin: auto;
     }
@@ -44,27 +34,29 @@
 </head>
 <body>
 
-<div class="form-container">
-  <div class="form-group">
-    <label for="fname">Name:</label>
-    <input type="text" id="fname" name="fname">
-  </div>
+<h1 style="color:darkgreen;" align="center">STUDENT DETAILS</h1>
 
-  <div class="form-group">
-    <label for="lname">Maths:</label>
-    <input type="text" id="lname" name="lname">
-  </div>
+<form action="/action_page.php">
+  <fieldset>
+    <div class="form-container">
+      <div class="form-group">
+        <label for="fname">Name:</label>
+        <input type="text" id="fname" name="fname" pattern="[A-Za-z\s]+" title="Only alphabets are allowed" required>
+      </div>
 
-  <div class="form-group">
-    <label for="email">English:</label>
-    <input type="email" id="email" name="email">
-  </div>
-</div>
+      <div class="form-group">
+        <label for="maths">Maths:</label>
+        <input type="number" id="maths" name="maths" min="0" title="Only numeric values are allowed" required>
+      </div>
 
-  
-  <button type="button" onclick="alert('Hello world!')">Submit</button>
+      <div class="form-group">
+        <label for="english">English:</label>
+        <input type="number" id="english" name="english" min="0" title="Only numeric values are allowed" required>
+      </div>
+    </div>
 
- </fieldset>
+    <button type="submit">Submit</button>
+  </fieldset>
 </form>
 
 </body>
