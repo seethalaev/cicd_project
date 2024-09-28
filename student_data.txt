@@ -1,0 +1,2 @@
+Name: k, Maths: 5, English: 1, Total: 6
+Name: seethal nambiar, Maths: 99, English: 1, Total: 100
